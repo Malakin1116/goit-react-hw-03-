@@ -1,31 +1,5 @@
-ul {
-    list-style: none; /* Убрать стандартные маркеры списка */
-    padding: 0;
-    margin: 0;
-    width: 100%; /* По ширине контейнера */
-}
-
-li {
-    background-color: #f9f9f9; /* Светлый фон для каждого элемента списка */
-    margin-bottom: 8px; /* Отступ между элементами списка */
-    padding: 10px; /* Внутренние отступы */
-    border-radius: 5px; /* Скруглённые углы */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Тень под элементом */
+ .ul {
     display: flex;
-    justify-content: space-between; /* Распределение контента по краям */
-    align-items: center; /* Центрирование контента по вертикали */
-}
-
-button {
-    background-color: #ff4b5a; /* Красный цвет кнопок */
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 3px;
-    cursor: pointer; /* Курсор в виде указателя */
-    transition: background-color 0.3s ease; /* Плавное изменение фона при наведении */
-}
-
-button:hover {
-    background-color: #ff2e3b; /* Чуть более тёмный оттенок при наведении */
-}
+    flex-direction: column;
+    gap: 10px;
+ }

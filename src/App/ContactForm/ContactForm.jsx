@@ -5,6 +5,8 @@ import { Form, Formik, Field, ErrorMessage } from "formik";
 import { nanoid } from "nanoid";
 import * as Yup from "yup";
 
+import css from "./ContactForm.module.css"
+
 export default function ContactForm ({ onAdd }){
 
     const contactYup = Yup.object().shape({
@@ -34,19 +36,25 @@ export default function ContactForm ({ onAdd }){
       validationSchema={contactYup}
       onSubmit={handleSubmit}
     >
-      <Form>
-            <div>
-                <div>
-                    <label  name="contactname">
+      <Form >
+            <div className={css.form}>
+                <div className={css.inputAndName}>
+                    <label 
+                         name="contactname"
+                    >
                     Name
                     </label>
-                    <Field type="text" name="contactname" />
+                    <Field 
+                        type="text" 
+                        name="contactname" 
+                    />
                     <ErrorMessage
-                    name="contactname"
-                    component="span"
+                        className={css.bad}
+                        name="contactname"
+                        component="span"
                     />
                 </div>
-                <div>
+                <div className={css.inputAndName}>
                     <label name="contactnumber">
                     Number
                     </label>
@@ -56,11 +64,15 @@ export default function ContactForm ({ onAdd }){
                     placeholder="777-77-77"
                     />
                     <ErrorMessage
+                    className={css.bad}
                     name="contactnumber"
                     component="span"
                     />
                 </div>
-                <button type="submit">
+                <button 
+                    className={css.button}
+                    type="submit"
+                >
                     Add contact
                 </button>
             </div>
