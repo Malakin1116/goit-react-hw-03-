@@ -13,7 +13,7 @@ export default function ContactForm ({ onAdd }){
           .max(50, "Maximum 50 symbols!")
           .required("Name is required"),
         contactnumber: Yup.string()
-          .matches(/^\d{3}-\d{2}-\d{2}$/, "Number format should be 888-88-887")
+          .matches(/^\d{3}-\d{2}-\d{2}$/, "Format 777-88-88")
           .required("Number is required"),
       });
 
@@ -53,7 +53,7 @@ export default function ContactForm ({ onAdd }){
                     <Field
                     type="tel"
                     name="contactnumber"
-                    placeholder="888-88-88"
+                    placeholder="777-77-77"
                     />
                     <ErrorMessage
                     name="contactnumber"
