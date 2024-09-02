@@ -46,72 +46,10 @@
 // }
 
 
-// import { useState } from 'react'
-// import { Formik } from 'formik';
-
-// import ContactForm from "./ContactForm/ContactForm"
-// import ContactList from "../App/ContactList/ContactList"
-
-// import contactJSON from "../contacts.json"
- 
-// export default function App () {
-
-//   const [contact, setContact] = useState(contactJSON);
-  
-
-//   const handleSubmit = (e) => {
-//     onAdd({
-//         id: Date.now(),
-//         text: e.target.elements.task.value,
-//     });
-//     e.target.reset();
-// };
-
-// const addContact = (newContact) => {
-//   setContact((precContact)=>{
-//     return[...precContact, newContact];
-//   });
-// } ;
-
-// const visiblecontact = contact.filter((e) => 
-//           e.text.toLowerCase().includes(e.filter.toLowerCase())
-//         );
-
-//   return (
-//     <Formik initialValues={{
-//       contact: "Add a new contact",
-//     }}
-//     onSubmit={
-//       handleSubmit}
-//     >
-//       <ContactForm
-//         onAdd={addContact}
-//       />
-//       {/* <SearchBox /> */}
-//       <ContactList
-//         contact={visiblecontact} 
-//       />
-//     </Formik>
-//   )
-// }
-
-
-import { Formik, Form, Field } from 'formik';
-// import contactJSON from "../contacts.json";
-
-// function Contact({data: { name, number}}) {
-//   return (
-//     <div >
-//       <p>{name}</p>
-//       <p>{number}</p>
-//       <button>Delete</button>
-//     </div>
-//   );
-// }
-
-
 
 import { useState} from "react";
+
+import ContactForm from "./ContactForm/ContactForm";
 
 
 export default function App() {
