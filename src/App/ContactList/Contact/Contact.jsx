@@ -7,7 +7,7 @@ export default function Contact({ data: { id, name, number }, onDelete }) {
     
     return (
       <div className={css.container}>
-        <div>
+        <div className={css.divLeft}>
           <p className={css.text}>
           <GrAccessibility className={css.icon} />
           {name}
