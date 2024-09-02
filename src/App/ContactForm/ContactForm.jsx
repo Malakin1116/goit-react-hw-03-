@@ -1,36 +1,4 @@
 
-// import css from './ContactForm.module.css';
-
-// export default function Form({onAdd}) {
-//     const handleSubmit = (e) => {
-//         e.preventDefault();
-//         onAdd({
-//             id: Date.now(),
-//             text: e.target.elements.task.value,
-//         });
-//         e.target.reset();
-//     };
-
-//     return (
-//         <Form className={css.form} onSubmit={handleSubmit}>
-//             <input className={css.input} type="text" name="task" placeholder="Add a new task" />
-//             <button className={css.button} type="submit">Add task</button>
-//         </Form>
-//     );
-// }
-
-// import { Form, Field } from 'formik';
-// import css from './ContactForm.module.css';
-
-// export default function ContactForm() {
-//   return (
-//     <Form className={css.form}>
-//       <Field className={css.input} type="text" name="contact" />
-//       <button className={css.button} type="submit">Add Contact</button>
-//     </Form>
-//   );
-// }
-
 
 import { Form, Formik, Field, ErrorMessage } from "formik";
 
@@ -67,36 +35,36 @@ export default function ContactForm ({ onAdd }){
       onSubmit={handleSubmit}
     >
       <Form>
-        <div>
-          <div>
-            <label  name="contactname">
-              Name
-            </label>
-            <Field type="text" name="contactname" />
-            <ErrorMessage
-              name="contactname"
-              component="span"
-            />
-          </div>
-          <div>
-            <label name="contactnumber">
-              Number
-            </label>
-            <Field
-              type="tel"
-              name="contactnumber"
-              placeholder="888-88-88"
-            />
-            <ErrorMessage
-              name="contactnumber"
-              component="span"
-            />
-          </div>
-          <button type="submit">
-            Add contact
-          </button>
-        </div>
-      </Form>
-    </Formik>
+            <div>
+                <div>
+                    <label  name="contactname">
+                    Name
+                    </label>
+                    <Field type="text" name="contactname" />
+                    <ErrorMessage
+                    name="contactname"
+                    component="span"
+                    />
+                </div>
+                <div>
+                    <label name="contactnumber">
+                    Number
+                    </label>
+                    <Field
+                    type="tel"
+                    name="contactnumber"
+                    placeholder="888-88-88"
+                    />
+                    <ErrorMessage
+                    name="contactnumber"
+                    component="span"
+                    />
+                </div>
+                <button type="submit">
+                    Add contact
+                </button>
+            </div>
+        </Form>
+     </Formik>
     );
 }
